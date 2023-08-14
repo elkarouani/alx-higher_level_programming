@@ -39,7 +39,7 @@ int is_palindrome(listint_t **head)
 	if (!*head || !(*head)->next)
 		return (1);
 
-	while (true)
+	while (1)
 	{
 		fast_track = fast_track->next->next;
 		if (!fast_track)
@@ -56,7 +56,6 @@ int is_palindrome(listint_t **head)
 	}
 
 	reverse_listint(&dupli_node);
-
 	while (dupli_node && temp_node)
 	{
 		if (temp_node->n == dupli_node->n)
