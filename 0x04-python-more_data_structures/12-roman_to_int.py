@@ -16,10 +16,10 @@ def roman_to_int(roman_string):
         current_value = roman_dict[roman_string[i]]
         next_value = 0 if i+1 == len(roman_string) else roman_dict[roman_string[i+1]]
 
-        if not next_value and current_value < next_value:
+        if current_value < next_value:
             result += next_value - current_value
             pass_current = True
-
-        result += current_value
+        else:
+            result += current_value
 
     return result
